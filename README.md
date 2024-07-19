@@ -1,4 +1,4 @@
-# XYZ-Chocolate-Company-Data-Cleaning-and-Transformation
+# XYZ-Chocolate-Company-Data-Cleaning-and-Transforming
 #  Executive Summary
 XYZ Chocolate Manufacturer company started its operations in 2020 with branches in India and New Zealand. Workforce data have been collected and stored in a spreadsheet to have a wider perspective of their functions, remuneration, and contribution to the company’s culture. Cleansing and transformations on data were performed through Power Query data management tool and complex formulas and functions were used for measures calculation. Interactive visualization tools were conformed to structure and explore the data to  establish comparisons from different perspectives and obtain descriptive outcomes.
 #  Business Problem:
