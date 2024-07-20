@@ -10,23 +10,23 @@ Cleansing and transforming data are crucial steps in the data analysis process t
   4.	Perform an Exploratory Data Analysis (EDA), focusing on summary statistics to understand data context and gain insights within the datasets, including the presence of outliers, patterns and trends.
 #  Results and Business Recommendations
 Obtaining accurate and reliable results from the data analysis process depends largely on the integrity of the data. A profile description was conducted on the two datasets related to the personnel who work at India and New Zealand locations to examine their structure and content.
-A table component was adjusted to store the data and provide a clear and logical format allowing to set rules and transformations to support the data preparation process for further analysis. 
+A table component was adjusted to store the data and provide a clear and logical format allowing to set rules and transformations to support the upcoming analysis. 
 With the use of spreadsheet functionalities, the process derived that:
 1.	Gathered information is the same for both datasets and is related to employee gender, department, age, date joined the company, salary, and rating. 
 2.	Both datasets were not properly maintained and didn’t follow a standardized format.
 3.	Duplicated employees and missing information are present on datasets, holding a total of 213 data points. 
 4.	Data has no organization and cannot be easily filtered.
-To potentially improve reliability during cleansing and transformation steps, adding more context that reveals a comprehensive and complete picture of the problem’s nature, datasets were consolidated into one, where New Zealand employee data was appended to the India dataset. A custom column “Country” was created to differentiate datapoints.
+
+To potentially improve reliability during cleansing and transformation steps, adding more context that reveals a comprehensive and complete picture of the problem’s nature, datasets were consolidated into one, where New Zealand employee data was appended to the India dataset. A custom column “Country” was created to differentiate data points.
 ##  Data Pre-Processing Activities
 ##  1.	Handling duplicates
 Duplicated data points can skew and distort analysis results, leading to confusing insights and causing analysts to draw incorrect conclusions or make flawed decisions. 
 Using Power Query <Remove duplicates> feature, employees with duplicated names, are erased, leaving only the first occurrence within the dataset. In case the datapoint appears multiple times, might be convenient to pick a distinct identifier as a duplicate determinator.
 ##  2.	Dealing with missing values 
-According to the dataset characteristics and analysis requirements, common strategies can be applied when missing values in the dataset. First, is just to remove missing values from rows and columns, keeping in mind, that available data can be significantly reduced. On the other hand, missing values can be replaced with estimated or calculated values also called imputation.
-That is the case for the gender column, where the strategy to deal with the missing values consists of assigning the <Other> value when the value is not present.
+According to the dataset characteristics and analysis requirements, common strategies can be applied when missing values in the dataset. First, is just to remove missing values from rows and columns, keeping in mind, that available data can be significantly reduced. On the other hand, missing values can be replaced with estimated or calculated values also called imputation. That is the case for the **Gender** column, where the strategy to deal with the missing values consists of assigning the **Other** value when the value is not present.
 ##  3.	Data types and format standardization
 Ensuring that each field in the dataset is consistently represented as the correct data type is crucial to preserve consistency in the analysis process. In the case of financial data represented by the employee salary, the type was adjusted as US currency with the corresponding symbol. 
-Converting dates and times to a specific format is essential to maintain uniformity. In this case, format variations are present in the date each employee joined to the company, using the DD-MM-YYYY format and the numeric format representing the number of elapsed days since the start of Excel Calendar (01/01/1900) to the date value.  
+Converting dates and times to a specific format is essential to maintain uniformity. In this case, format variations are present in the date each employee joined to the company, using the DD-MM-YYYY format and the numeric format that represents the number of elapsed days since the start of Excel Calendar (01/01/1900) to the specified date value.  
 The date format was adjusted to the standard US format MM-DD-YYYY.
 
 ![Picture1](https://github.com/user-attachments/assets/c172b964-d2ed-4f2f-bd18-29ce46d830ba)
@@ -42,7 +42,8 @@ The Exploratory Data Analysis (EDA) process was conducted to investigate and sum
 ![2](https://github.com/user-attachments/assets/4ecf9783-f8e5-4008-843a-c185f778e24d)
 
 The difference between the mean and median values for salary can be interpreted as the probability that some employees have very high salaries, which means that the average salary is being pulled in the wrong direction.
-A custom column <Tenure> was created and added to the table to store the years that every employee has been with the company. The average tenure is then calculated.
+
+A custom column **Tenure** was created and added to the table to store the years that every employee has been with the company. The average tenure is then calculated.
 
 #  Comparison of Female vs Male personnel within the company
 Understanding the representation and treatment of males and females within a company is crucial for addressing potential disparities in areas such as hiring, promotion, pay, and overall treatment in the workplace. Comparing gender experiences can help identify factors that contribute to job satisfaction and retention, allowing companies to address any specific concerns, improve workplace culture, and retain top talent from both genders.
@@ -53,7 +54,7 @@ Pivot tables spreadsheet’s feature was used to summarize how the company’s e
 Gender-based analysis reveals no relevant differences regarding department representation, age ranges, and number of years with the company. In the case of salary distribution, females receive higher payments than males, with the exception of the ones who work in the Website department. 
 
 #  Relationship between Salary and Rating
-This type of relationship provides valuable insights into how performance evaluations impact compensation within a company. The chocolate manufacturer uses employee ratings as a basis for determining salary adjustments. At first sight, the analysis might reveal that on average, personnel with greater ratings have lower salaries. Referring to how spread the employees are and related to the rating, the wider group has average as performance classifier. That would be a reason to justify why the average salary in this category looks less to inferior rating salaries.
+This type of relationship provides valuable insights into how performance evaluations impact compensation within a company. The Chocolate Manufacturer uses employee ratings as a basis for determining salary adjustments. At first sight, the analysis might reveal that on average, personnel with greater ratings have lower salaries. Referring to how spread the employees are and related to the rating, the wider group has average as performance classifier. That would be a reason to justify why the average salary in this category looks less to inferior rating salaries.
 
 ![4](https://github.com/user-attachments/assets/ef853e44-dbec-4d4d-831f-a7c9a955bd71)
 
